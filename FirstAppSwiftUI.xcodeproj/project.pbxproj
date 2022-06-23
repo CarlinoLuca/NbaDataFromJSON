@@ -15,6 +15,7 @@
 		CE67A3EE2860806800FAF663 /* FirstAppSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3ED2860806800FAF663 /* FirstAppSwiftUIUITests.swift */; };
 		CE67A3F02860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3EF2860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift */; };
 		CE67A3FD2860CB7100FAF663 /* fetchingDataJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */; };
+		CE803BD4286494D20037AE44 /* nbaSearchPlayerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BD3286494D10037AE44 /* nbaSearchPlayerJSON.swift */; };
 		CE9DE11E286370F000673C4D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE9DE11D286370F000673C4D /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		CE67A3ED2860806800FAF663 /* FirstAppSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppSwiftUIUITests.swift; sourceTree = "<group>"; };
 		CE67A3EF2860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchingDataJson.swift; sourceTree = "<group>"; };
+		CE803BD3286494D10037AE44 /* nbaSearchPlayerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nbaSearchPlayerJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		CE67A3D12860806300FAF663 /* FirstAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CE803BD3286494D10037AE44 /* nbaSearchPlayerJSON.swift */,
 				CE67A3D22860806300FAF663 /* FirstAppSwiftUIApp.swift */,
 				CE67A3D42860806300FAF663 /* ContentView.swift */,
 				CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */,
@@ -270,6 +273,7 @@
 			files = (
 				CE67A3D52860806300FAF663 /* ContentView.swift in Sources */,
 				CE67A3D32860806300FAF663 /* FirstAppSwiftUIApp.swift in Sources */,
+				CE803BD4286494D20037AE44 /* nbaSearchPlayerJSON.swift in Sources */,
 				CE67A3FD2860CB7100FAF663 /* fetchingDataJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,9 +24,25 @@ struct ContentView: View {
                     .font(.system(size: 30))
                     .padding()
                     .frame(height: 300, alignment: .top)
+                
+                //First Button --> Click go to Full Conference Squad
                 Button(action: {}, label: {
-                    NavigationLink(destination: ContentViewB()) {
-                        Text("Open view Numeber 2")
+                    NavigationLink(destination: SquadList()) {
+                        Text("Full Conference Squad")
+                            //.fontWeight(.bold)
+                            //.frame(width: 300, height: 300)
+                            .foregroundColor(Color.black)
+                            .font(.system(size: 18))
+                            .padding()
+                    }
+                    
+                }).buttonStyle(.bordered)
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.blue).opacity(0.9))
+                
+                //Second Button --> Click go to Search Player
+                Button(action: {}, label: {
+                    NavigationLink(destination: PlayerResearch()) {
+                        Text("Search player")
                             //.fontWeight(.bold)
                             //.frame(width: 300, height: 300)
                             .foregroundColor(Color.black)
@@ -47,7 +63,7 @@ struct ContentView: View {
 
 
 
-struct ContentViewB : View {
+struct SquadList : View {
     
     @ObservedObject var nbaConference = nbaData()
     
@@ -74,6 +90,17 @@ struct ContentViewB : View {
             }   .navigationBarTitle("")
                 .navigationBarHidden(true)
             
+        }
+    }
+}
+
+struct PlayerResearch : View {
+    
+    @ObservedObject var playerOBJ = playerData()
+    
+    var body: some View {
+        ZStack{
+            Text("Testing Appp")
         }
     }
 }
