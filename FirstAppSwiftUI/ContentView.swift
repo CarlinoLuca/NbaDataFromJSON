@@ -100,7 +100,19 @@ struct PlayerResearch : View {
     
     var body: some View {
         ZStack{
-            Text("Testing Appp")
+            VStack{
+                ScrollView (showsIndicators: false) {
+                    ForEach(playerOBJ.playerDataVar){player in
+                        VStack (alignment: .leading){
+                            Text(String(player.firstName))
+                                .fontWeight(.bold)
+                            Text(String(player.lastName))
+                                .fontWeight(.bold)
+                        }
+                    }
+                    
+                }
+            }
         }
     }
 }
