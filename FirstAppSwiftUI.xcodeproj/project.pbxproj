@@ -14,6 +14,8 @@
 		CE67A3E42860806800FAF663 /* FirstAppSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3E32860806800FAF663 /* FirstAppSwiftUITests.swift */; };
 		CE67A3EE2860806800FAF663 /* FirstAppSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3ED2860806800FAF663 /* FirstAppSwiftUIUITests.swift */; };
 		CE67A3F02860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3EF2860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift */; };
+		CE67A3FD2860CB7100FAF663 /* fetchingDataJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */; };
+		CE9DE11E286370F000673C4D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE9DE11D286370F000673C4D /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		CE67A3E92860806800FAF663 /* FirstAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE67A3ED2860806800FAF663 /* FirstAppSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppSwiftUIUITests.swift; sourceTree = "<group>"; };
 		CE67A3EF2860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchingDataJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9DE11E286370F000673C4D /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			children = (
 				CE67A3D22860806300FAF663 /* FirstAppSwiftUIApp.swift */,
 				CE67A3D42860806300FAF663 /* ContentView.swift */,
+				CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */,
 				CE67A3D62860806700FAF663 /* Assets.xcassets */,
 				CE67A3D82860806700FAF663 /* Preview Content */,
 			);
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = FirstAppSwiftUI;
+			packageProductDependencies = (
+				CE9DE11D286370F000673C4D /* SwiftyJSON */,
+			);
 			productName = FirstAppSwiftUI;
 			productReference = CE67A3CF2860806300FAF663 /* FirstAppSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = CE67A3C62860806200FAF663;
+			packageReferences = (
+				CE9DE11C286370F000673C4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = CE67A3D02860806300FAF663 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +270,7 @@
 			files = (
 				CE67A3D52860806300FAF663 /* ContentView.swift in Sources */,
 				CE67A3D32860806300FAF663 /* FirstAppSwiftUIApp.swift in Sources */,
+				CE67A3FD2860CB7100FAF663 /* fetchingDataJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +589,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE9DE11C286370F000673C4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE9DE11D286370F000673C4D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9DE11C286370F000673C4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE67A3C72860806200FAF663 /* Project object */;
 }
