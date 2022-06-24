@@ -10,9 +10,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    
-    
-    
     var body: some View {
         NavigationView{
             ZStack{
@@ -68,33 +65,54 @@ struct SquadList : View {
     @ObservedObject var nbaConference = nbaData()
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             VStack{
-                    List{
-                        Section(header: Text("East")) {
-                            ForEach(nbaConference.nbaDataArr){squad in
-                                if(String(squad.conference) == "East"){
-                                    Text(String(squad.fullName))
-                                }
+                
+                List{
+                    Section(header: Text("East")) {
+                        ForEach(nbaConference.nbaDataArr){squad in
+                            if(String(squad.conference) == "East"){
+                                //Text(String(squad.fullName))
+                                
+                                NavigationLink(String(squad.fullName).capitalized,
+                                               destination: SquadInfoO(nomeSquadra: String(squad.fullName))
+                                )
                             }
-                            
                         }
                         
-                        Section(header: Text("West")) {
-                            ForEach(nbaConference.nbaDataArr){squad in
-                                if(String(squad.conference) == "West"){
-                                    Text(String(squad.fullName))
-                                }
+                    }
+                    
+                    Section(header: Text("West")) {
+                        ForEach(nbaConference.nbaDataArr){squad in
+                            if(String(squad.conference) == "West"){
+                                //Text(String(squad.fullName))
+                                NavigationLink(String(squad.fullName).capitalized,
+                                               destination: SquadInfoO(nomeSquadra: String(squad.fullName))
+                                )
                             }
                         }
                     }
+                }.listStyle(.grouped)
+                    
             }
             
-        } .navigationBarTitle("Squad Info")
-        //.navigationBarHidden(true)
+        //} //.navigationBarTitle("Squad Info")
         
+        //.navigationBarTitleDisplayMode(.inline)
+        /*
+        .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Squad Info")
+                }
+            }
+        *///.navigationBarTitle("Squad Info")
+            //.navigationBarHidden(true)
     }
+    
+    //.navigationBarHidden(true)
+    
 }
+
 
 
 struct PlayerResearch : View {
@@ -118,6 +136,22 @@ struct PlayerResearch : View {
             }
         }
     }
+}
+
+
+struct SquadInfoO : View {
+    
+    //@ObservedObject var playerOBJ = playerData()
+    @State var nomeSquadra :String
+    
+    var body: some View {
+        ZStack{
+            VStack{
+                Text(nomeSquadra)
+            }
+        }
+    }
+     
 }
 
 
