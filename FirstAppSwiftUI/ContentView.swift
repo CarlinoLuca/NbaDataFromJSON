@@ -66,7 +66,7 @@ struct SquadList : View {
     
     var body: some View {
         //NavigationView {
-            VStack{
+            //VStack{
                 
                 List{
                     Section(header: Text("East")) {
@@ -85,7 +85,6 @@ struct SquadList : View {
                     Section(header: Text("West")) {
                         ForEach(nbaConference.nbaDataArr){squad in
                             if(String(squad.conference) == "West"){
-                                //Text(String(squad.fullName))
                                 NavigationLink(String(squad.fullName).capitalized,
                                                destination: SquadInfoO(nomeSquadra: String(squad.fullName))
                                 )
@@ -93,8 +92,9 @@ struct SquadList : View {
                         }
                     }
                 }.listStyle(.grouped)
+            
                     
-            }
+            //}
             
         //} //.navigationBarTitle("Squad Info")
         
@@ -122,6 +122,7 @@ struct PlayerResearch : View {
     var body: some View {
         ZStack{
             VStack{
+                /*
                 ScrollView (showsIndicators: false) {
                     ForEach(playerOBJ.playerDataVar){player in
                         VStack (alignment: .leading){
@@ -131,6 +132,32 @@ struct PlayerResearch : View {
                                 .fontWeight(.bold)
                         }
                     }
+                    
+                }
+                */
+                
+                List(playerOBJ.playerDataVar){player in
+                    Text("\(String(player.firstName)) \(String(player.lastName))")
+                    //Text(String(player.lastName))
+                    //Text(Int(player.heightFeet)!)
+                    //Text(Int(player.heightInches)!)
+                    //Text(String(player.position))
+                    //Text(Int(player.weightPounds)!)
+                    /*
+                    Section(header: Text("East")) {
+                        ForEach(nbaConference.nbaDataArr){squad in
+                            if(String(squad.conference) == "East"){
+                                //Text(String(squad.fullName))
+                                
+                                NavigationLink(String(squad.fullName).capitalized,
+                                               destination: SquadInfoO(nomeSquadra: String(squad.fullName))
+                                )
+                            }
+                        }
+                        
+                    }
+                     */
+                    
                     
                 }
             }
