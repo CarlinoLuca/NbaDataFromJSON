@@ -56,9 +56,11 @@ class playerData: ObservableObject {
                 let position = i.1["position"].stringValue
                 let weightPounds = Int(i.1["weight_pounds"].stringValue) ?? 0
                 
+                
+                
                 var teaminfo = TeamInfo(id: 0, abbreviation: "", city: "", conference: "", division: "", fullName: "", name: "")
                 //print(i.1["team"])
-                print(i.1["team"]["full_name"])
+                //print(i.1["team"]["full_name"])
                 teaminfo = TeamInfo(
                                     id: i.1["team"]["id"].rawValue as? Int ?? 0,
                                     abbreviation: i.1["team"]["abbreviation"].stringValue,
@@ -93,14 +95,15 @@ class playerData: ObservableObject {
                 }
                 */
                 //print("")
-                //print("")
+                
                 
                 //print("Team Info:")
                 //print(teaminfo)
                 DispatchQueue.main.async {
                     self.playerDataVar.append(PlayerInfo(id: id, firstName: firstName, heightFeet: heightFeet, heightInches: heightInches, lastName: lastName, position: position, team: teaminfo, weightPounds: weightPounds))
                 }
-                print(self.playerDataVar)
+                //print(self.playerDataVar)
+                
             }
              
              

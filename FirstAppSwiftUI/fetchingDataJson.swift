@@ -71,22 +71,29 @@ class nbaData: ObservableObject {
                 let city = i.1["city"].stringValue
                 let conference = i.1["conference"].stringValue
                 let division = i.1["division"].stringValue
-                let fullName = i.1["fullName"].stringValue
+                let fullName = i.1["full_name"].stringValue
                 let name = i.1["name"].stringValue
-            
+                
+                
+                
                 DispatchQueue.main.async {
                     //self.nbaDataArr.append(SquadInfo(id: id, abbreviation: abbreviation, city: city, conference: conference, division: division, fullName: fullName, name: name))
                     self.nbaDataArr.append(SquadInfo(id: id.rawValue as! Int, abbreviation: abbreviation, city: city, conference: conference, division: division, fullName: fullName, name: name))
                 }
+                
+                
             }
              
-             
+            
         }.resume()
+        
     }
     
     func testprinting(){
         print(nbaDataArr)
+        //print(conferenceName)
     }
-
+    
+   
 }
 
