@@ -37,7 +37,7 @@ class playerData: ObservableObject {
 
     
     init() {
-        let url = URL(string: "https://www.balldontlie.io/api/v1/players")!
+        let url = URL(string: "https://www.balldontlie.io/api/v1/players?per_page=60")!
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { (data, _, err) in
             if err != nil {

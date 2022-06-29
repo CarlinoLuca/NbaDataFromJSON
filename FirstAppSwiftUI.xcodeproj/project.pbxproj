@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0538D7286C67A3002876AF /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0538D5286C67A3002876AF /* PlayersView.swift */; };
+		CE0538D8286C67A3002876AF /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0538D6286C67A3002876AF /* TeamsView.swift */; };
 		CE67A3D32860806300FAF663 /* FirstAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3D22860806300FAF663 /* FirstAppSwiftUIApp.swift */; };
 		CE67A3D52860806300FAF663 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3D42860806300FAF663 /* ContentView.swift */; };
 		CE67A3D72860806700FAF663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE67A3D62860806700FAF663 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0538D5286C67A3002876AF /* PlayersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayersView.swift; path = ../../../../../Desktop/TestUI/TestUI/PlayersView.swift; sourceTree = "<group>"; };
+		CE0538D6286C67A3002876AF /* TeamsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamsView.swift; path = ../../../../../Desktop/TestUI/TestUI/TeamsView.swift; sourceTree = "<group>"; };
 		CE67A3CF2860806300FAF663 /* FirstAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE67A3D22860806300FAF663 /* FirstAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		CE67A3D42860806300FAF663 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				CE67A3D22860806300FAF663 /* FirstAppSwiftUIApp.swift */,
 				CE67A3D42860806300FAF663 /* ContentView.swift */,
 				CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */,
+				CE0538D5286C67A3002876AF /* PlayersView.swift */,
+				CE0538D6286C67A3002876AF /* TeamsView.swift */,
 				CE67A3D62860806700FAF663 /* Assets.xcassets */,
 				CE67A3D82860806700FAF663 /* Preview Content */,
 			);
@@ -271,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0538D7286C67A3002876AF /* PlayersView.swift in Sources */,
 				CE67A3D52860806300FAF663 /* ContentView.swift in Sources */,
 				CE67A3D32860806300FAF663 /* FirstAppSwiftUIApp.swift in Sources */,
+				CE0538D8286C67A3002876AF /* TeamsView.swift in Sources */,
 				CE803BD4286494D20037AE44 /* nbaSearchPlayerJSON.swift in Sources */,
 				CE67A3FD2860CB7100FAF663 /* fetchingDataJson.swift in Sources */,
 			);
