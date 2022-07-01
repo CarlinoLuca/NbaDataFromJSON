@@ -13,6 +13,8 @@ struct ContentView: View {
     @State var text = ""
     @State private var isEditing = false;
     @State private var showingSheet = false
+   // var nbaConference2 = nbaData()
+    
     
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -57,7 +59,9 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .font(.system(size: 18, weight: .bold, design: .default))
                         
-                        Button(action: {}, label: {
+                        Button(action: {
+                            //print(nbaConference2.nbaDataArr)
+                        }, label: {
                             NavigationLink(destination: TeamsView()) {
                                 Text("View All")
                                     .foregroundColor(.red)
@@ -160,9 +164,12 @@ struct CustomButtonTeam: View {
     var body: some View {
         ForEach (nbaConference.nbaDataArr) {squad in
             Button(action: {}, label: {
+                /*
                 Text(squad.fullName)
                     .font(.system(size: 18))
                     .padding()
+                */
+                Image("nba-" + squad.abbreviation + "-logo").frame(width: 100, height: 100)
             })
             .frame(width: 100, height: 100, alignment: .leading)
             .foregroundColor(.white)
