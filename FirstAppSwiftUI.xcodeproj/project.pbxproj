@@ -18,6 +18,8 @@
 		CE67A3F02860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3EF2860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift */; };
 		CE67A3FD2860CB7100FAF663 /* fetchingDataJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */; };
 		CE803BD4286494D20037AE44 /* nbaSearchPlayerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE803BD3286494D10037AE44 /* nbaSearchPlayerJSON.swift */; };
+		CE931336286F23640094CF27 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CE931335286F23640094CF27 /* SwiftSoup */; };
+		CE931338286F23910094CF27 /* dataScraperNBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE931337286F23910094CF27 /* dataScraperNBA.swift */; };
 		CE9DE11E286370F000673C4D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE9DE11D286370F000673C4D /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,7 @@
 		CE67A3EF2860806800FAF663 /* FirstAppSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchingDataJson.swift; sourceTree = "<group>"; };
 		CE803BD3286494D10037AE44 /* nbaSearchPlayerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nbaSearchPlayerJSON.swift; sourceTree = "<group>"; };
+		CE931337286F23910094CF27 /* dataScraperNBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataScraperNBA.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9DE11E286370F000673C4D /* SwiftyJSON in Frameworks */,
+				CE931336286F23640094CF27 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +113,7 @@
 				CE67A3D42860806300FAF663 /* ContentView.swift */,
 				CE67A3FC2860CB7100FAF663 /* fetchingDataJson.swift */,
 				CE0538D5286C67A3002876AF /* PlayersView.swift */,
+				CE931337286F23910094CF27 /* dataScraperNBA.swift */,
 				CE0538D6286C67A3002876AF /* TeamsView.swift */,
 				CE67A3D62860806700FAF663 /* Assets.xcassets */,
 				CE67A3D82860806700FAF663 /* Preview Content */,
@@ -159,6 +164,7 @@
 			name = FirstAppSwiftUI;
 			packageProductDependencies = (
 				CE9DE11D286370F000673C4D /* SwiftyJSON */,
+				CE931335286F23640094CF27 /* SwiftSoup */,
 			);
 			productName = FirstAppSwiftUI;
 			productReference = CE67A3CF2860806300FAF663 /* FirstAppSwiftUI.app */;
@@ -234,6 +240,7 @@
 			mainGroup = CE67A3C62860806200FAF663;
 			packageReferences = (
 				CE9DE11C286370F000673C4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				CE931334286F23640094CF27 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = CE67A3D02860806300FAF663 /* Products */;
 			projectDirPath = "";
@@ -281,6 +288,7 @@
 				CE67A3D52860806300FAF663 /* ContentView.swift in Sources */,
 				CE67A3D32860806300FAF663 /* FirstAppSwiftUIApp.swift in Sources */,
 				CE0538D8286C67A3002876AF /* TeamsView.swift in Sources */,
+				CE931338286F23910094CF27 /* dataScraperNBA.swift in Sources */,
 				CE803BD4286494D20037AE44 /* nbaSearchPlayerJSON.swift in Sources */,
 				CE67A3FD2860CB7100FAF663 /* fetchingDataJson.swift in Sources */,
 			);
@@ -603,6 +611,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE931334286F23640094CF27 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		CE9DE11C286370F000673C4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -614,6 +630,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE931335286F23640094CF27 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE931334286F23640094CF27 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
 		CE9DE11D286370F000673C4D /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE9DE11C286370F000673C4D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
