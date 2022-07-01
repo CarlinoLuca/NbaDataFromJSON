@@ -33,13 +33,12 @@ class dataScraperInfo {
     
     init(nomeGiocatore: String, cognomeGiocatore: String){
         
-        let stringURL = createLinkSearchPlayer(nomeGiocatore: nomeGiocatore, cognomeGiocatore: cognomeGiocatore)
+        var stringURL = createLinkSearchPlayer(nomeGiocatore: nomeGiocatore, cognomeGiocatore: cognomeGiocatore)
+        stringURL = checkIfIsCorrectPlayer(nomeGiocatore: nomeGiocatore, cognomeGiocatore: cognomeGiocatore, urlCompleto: stringURL)
+        
         let url = URL(string: stringURL)!
         
         //let url = URL(string:"https://www.basketball-reference.com/players/c/curryst01.html")!
-        
-        
-        
         
         var html = ""
         
@@ -89,6 +88,51 @@ class dataScraperInfo {
         let ThreeLetterOfName = nomeGiocatore[..<index]
         index = cognomeGiocatore.index(cognomeGiocatore.startIndex, offsetBy: 1)
         return urlBase + "/" + cognomeGiocatore[..<index].lowercased() + "/" + FiveLetterOfSurname.lowercased() + ThreeLetterOfName.lowercased() + "01.html"
+    }
+    
+    
+    func checkIfIsCorrectPlayer(nomeGiocatore: String,cognomeGiocatore: String , urlCompleto: String) -> String {
+        var htmlCheck = ""
+        //var urlCheck = URL(string:urlCompleto)
+        do{
+            htmlCheck = try String(contentsOf: URL(string:urlCompleto)!)
+            //print(html.prefix(2000))
+        }catch{
+            //let html = ""
+            print(error.localizedDescription)
+        }
+        
+        var documentCheck = try! SwiftSoup.parse(htmlCheck)
+        var nomePresuntoGiocatore = try! documentCheck.title()
+        var nameParsed = nomePresuntoGiocatore.replacingOccurrences(of: " Stats | Basketball-Reference.com", with: "")
+        //print(nameParsed)
+        
+        if(nameParsed == nomeGiocatore + " " + cognomeGiocatore){
+            print(urlCompleto)
+            return urlCompleto
+        }
+        var contatorePerUrl = 2
+        var newURL = ""
+        repeat{
+            newURL = urlCompleto.replacingOccurrences(of: "01.html", with: "0" + String(contatorePerUrl) + ".html")
+            //print(indexG)
+            print(newURL)
+            
+            do{
+                htmlCheck = try String(contentsOf: URL(string:newURL)!)
+                //print(html.prefix(2000))
+            }catch{
+                //let html = ""
+                print(error.localizedDescription)
+            }
+            documentCheck = try! SwiftSoup.parse(htmlCheck)
+            nomePresuntoGiocatore = try! documentCheck.title()
+            nameParsed = nomePresuntoGiocatore.replacingOccurrences(of: " Stats | Basketball-Reference.com", with: "")
+            print(nameParsed)
+            //print(contatorePerUrl)
+            contatorePerUrl += 1
+        }while(nameParsed != nomeGiocatore + " " + cognomeGiocatore)
+        return newURL
     }
 }
 
